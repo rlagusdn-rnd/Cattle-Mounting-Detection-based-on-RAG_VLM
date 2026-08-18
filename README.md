@@ -88,7 +88,9 @@ Video Processing: 3.0 FPS sampling
 NVIDIA GPU (CUDA 13, tested on RTX 4070 Ti SUPER 16 GB), Python 3.10+.
 
 pip install torch torchvision transformers vllm qwen-vl-utils
+
 python test_rag.py     # run RAG pipeline
+
 python test.py         # run VLM only
 
 
