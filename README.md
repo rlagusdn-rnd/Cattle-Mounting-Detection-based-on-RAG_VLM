@@ -8,7 +8,7 @@ Code and sample data for detecting cattle mounting behavior (Normal / Mounting) 
 2. Reasoning — feed the query video (16 uniform frames) and the retrieved
    description to Qwen3-VL-4B-thinking-FP8 (served with vLLM) to output reason and result
 
-The `datasets/` folder contains only a small sample datas for running the demo, not the full dataset used in the paper.
+The `datasets/` folder contains only a small sample datas for running the demo, not the full dataset used in the hub.
 
 # Structure
 
