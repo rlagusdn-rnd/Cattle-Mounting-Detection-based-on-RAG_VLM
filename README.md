@@ -13,13 +13,23 @@ The `datasets/` folder contains only a small sample datas for running the demo, 
 # Structure
 
 ```
-test_rag.py                               # inference pipeline
-requirements.txt
-datasets/
-  train_video_reason_annotation.json      # reference DB annotations
-  videos/                                  # reference videos      
-  val/{normal,mounting}/                   # validation video clips    
-result_rag.json, result_rag_normal.json   # output results
+├── datasets/
+│   ├── train_video_reason_annotation.json  # reference DB annotations
+│   ├── videos/                             # reference videos (332개)
+│   └── val/                                # validation video clips
+│       ├── mounting/                       
+│       └── normal/                         
+├── weights/
+│   └── Qwen3-VL-4B-Thinking-FP8/          # VLM weight
+├── test_rag.py                            # RAG inference pipeline
+├── test.py                                # VLM Only inference
+├── test_text_only.py                      
+├── result.json                            # VLM Only mounting
+├── result_rag.json                        # RAG VLM mounting
+├── result_normal.json                     # VLM Only normal
+├── result_rag_normal.json                 # RAG + VLM normal
+└── requirements.txt                       
+
 ```
 
 # Technical Implementation Details
@@ -77,9 +87,9 @@ Video Processing: 3.0 FPS sampling
 
 NVIDIA GPU (CUDA 13, tested on RTX 4070 Ti SUPER 16 GB), Python 3.10+.
 
-
-pip install -r requirements.txt
-python test_rag.py
+pip install torch torchvision transformers vllm qwen-vl-utils
+python test_rag.py     # run RAG pipeline
+python test.py         # run VLM only
 
 
 # References
