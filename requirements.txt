@@ -1,0 +1,16 @@
+# Environment
+# Python 3.12 (3.10+ should work)
+# NVIDIA GPU with CUDA 13  (tested on RTX 4070 Ti SUPER, 16 GB)
+# Linux x86_64
+
+torch==2.11.0
+torchvision==0.26.0
+torchaudio==2.11.0
+
+vllm==0.21.0
+transformers==4.57.1
+qwen-vl-utils==0.0.14
+
+decord==0.6.0
+av==15.1.0
+pillow==12.2.0

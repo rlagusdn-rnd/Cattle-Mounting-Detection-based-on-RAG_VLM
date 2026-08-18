@@ -1,0 +1,19 @@
+# Model weights (download from Hugging Face separately)
+weights/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Caches
+.cache/
+
+# OS
+.DS_Store
